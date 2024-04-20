@@ -22,7 +22,7 @@
     <script src="https://kit.fontawesome.com/8d4272ce0c.js" crossorigin="anonymous"></script>
 
     <style>
-        body {
+body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -35,8 +35,8 @@
 
 .container{
     display: flex;
-    margin: 20px 100px;
-    height: 50vh;
+    margin: 20px 15%;
+    height: 90vh;
 }
 
 .box1{
@@ -46,10 +46,39 @@
     margin-right: 20px;
 }
 
+.box1 h1, .box1 p{
+    margin: 15px;
+}
+
+.icon-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .icon-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  .icon-list img {
+    margin-right: 10px;
+  }
+
+  .icon-list h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .icon-list p {
+    margin: 0;
+    color: gray; 
+  }
+
 .box2{
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(10,1fr);
 }
 
@@ -61,8 +90,8 @@
 }
 
 .image1{
-    grid-column-start:4;
-    grid-column-end: 7;
+    grid-column-start:2;
+    grid-column-end: 2;
     grid-row-start: 6;
     grid-row-end: 11;
     padding-left: 5px;
@@ -71,23 +100,26 @@
 }
 
 .image2{
+    display: flex;
     grid-column-start:1;
-    grid-column-end: 4;
+    grid-column-end: 2;
     grid-row-start: 6;
     grid-row-end: 11;
     margin-bottom: 25px;
     background-color: aqua;
+    justify-content: center;
+    align-items: center;
 }
 
 .headingInsideImage2{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     align-self: center;
-    align-content: center;
 }
 
 .headingInsideImage2 div{
-
+    display: flex;
+    flex-direction: column;
 }
 
 .headingInsideImage2 h3{
@@ -97,14 +129,115 @@
 }
 
 .image3{
-    grid-column-start:3;
-    grid-column-end: 6;
+    grid-column-start:1;
+    grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 6;
     padding-top: 20px;
     padding-bottom: 5px;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1100px) {
+    .container {
+        margin: 20px 5%; /* Smaller side margins for tablet */
+        height: 100vh; /* Height adjusts to content */
+    }
 
 }
+
+
+/* Mobile (devices with widths up to 767px) */
+@media (max-width: 767px) {
+    .container {
+        margin: 20px 2%; /* Smaller side margins for mobile */
+        height: auto;
+    }
+    .box1{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    margin-right: 20px;
+}
+
+.box2{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(3,200px);
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.image1 img, .image2 img,
+.image3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image1{
+    grid-column-start:1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.image2{
+    display: flex;
+    grid-column-start:1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-bottom: 0px;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+}
+
+.headingInsideImage2{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.headingInsideImage2 div{
+    display: flex;
+    flex-direction: column;
+}
+
+.headingInsideImage2 h3{
+   /* max-width: 5px;
+    padding-left: 20px;
+    */
+}
+
+.image3{
+    grid-column-start:1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-right: 0%;
+    margin-left: 0%;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+}
+
 
 
     </style>
@@ -117,37 +250,62 @@
 <div class="section">
     <div class="container">
         <div class="box1">
-            <h1> Headline for this box that should be a little bit longer then this </h1>
-            <p> This is dummy text for creating a paragrap</p>
-            <ul>
-                <li> First is a point</li>
-                <li> Second is a point</li>
-                <li> Third is a point</li>
-            </ul>
+            <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit </h1>
+            <p> ut enim ad minim veniam quis nostrud expercitipaton illamico nisi ut alluiped ex ea comm </p>
+            <ul class="icon-list">
+                <li>
+                  <img src="images/1.png" alt="Icon">
+                  <div>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </li>
 
+                <li>
+                    <img src="images/2.png" alt="Icon">
+                    <div>
+                      <h3>Lorem ipsum</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <img src="images/3.png" alt="Icon">
+                    <div>
+                      <h3>Lorem ipsum</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </li>
+                <!-- Repeat the <li> block for each item in your list -->
+              </ul>
         </div>
 
         <div class="box2">
 
             <div class="image1">
-               <img src="images/pexels-aliona-pasha-1687920-3238529.jpg" alt="Italian Trulli"> 
+               <img src="images/iam_os-jst9zmbCD58-unsplash.jpg" alt="Italian Trulli"> 
             </div>
             
             <div class="image2">
                 <div class="headingInsideImage2">
-                    <div><h3> Consequat Duis 1450 </h3> </div>
-                </div>
-                     
+                    <div>
+                        <h3> Consequat </h3> 
+                        <h3> Duis </h3> 
+                        <h3> 1450 </h3> 
+                    </div>
+                </div>     
                 </div>
 
              <div class="image3">
-                <img src="images/pexels-lany-18127640.jpg" alt="Italian Trulli"> 
+                <img src="images/robert-anasch-n4nccEcD6AY-unsplash (1).jpg" alt="Italian Trulli"> 
              </div>
 
         </div>
     </div>
 
 </div>
+
+<a href="/index copy.html"> Klikk her for ny fane </a>
 
 </body>
 </html>

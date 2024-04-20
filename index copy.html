@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Josefin+Slab:wght@700&family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <title> Home - My Portfolio </title>
+
+    <meta charset="UTF-8">
+
+    <meta name="author" content="Marius Kvål">
+
+    <meta name="description" content=" Portfolio">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="Keywords" content="programming, front-end">
+
+    <script src="https://kit.fontawesome.com/8d4272ce0c.js" crossorigin="anonymous"></script>
+
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    background-color: lightgrey;
+}
+
+.container {
+    display: flex;
+    margin: 20px 15%;
+    height: 90vh;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.box1 h1, .box1 p {
+    margin: 15px;
+}
+
+.icon-list {
+    list-style: none;
+    padding: 0;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.icon-list img {
+    margin-right: 10px;
+}
+
+.icon-list h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.icon-list p {
+    margin: 0;
+    color: gray;
+}
+
+.box2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px; /* Adjust the space between the elements */
+    height: 100%; /* Take full height of the container */
+}
+
+.image3, .image1 {
+    overflow: hidden; /* Ensures the image doesn't overflow its container */
+}
+
+.image3 img, .image1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the images cover their containers */
+}
+
+.image2 {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    background-color: #007bff; /* Replace with the actual color code */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px; /* Adjust padding */
+}
+
+/* Responsive adjustments for .box2 */
+@media (max-width: 768px) {
+    .box2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto; /* Adjust the grid for a single column layout */
+    }
+
+    .image2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .image3, .image1 {
+        grid-column: 1;
+    }
+}
+
+/* Mobile (devices with widths up to 767px) */
+@media (max-width: 767px) {
+    .container {
+        margin: 20px 2%; /* Smaller side margins for mobile */
+        height: auto;
+    }
+    
+    /* ... rest of your responsive CSS for mobile */
+}
+
+/* Tablet (devices with widths between 768px and 1100px) */
+@media (min-width: 768px) and (max-width: 1100px) {
+    .container {
+        margin: 20px 5%; /* Smaller side margins for tablet */
+        height: 100vh; /* Height adjusts to content */
+    }
+    
+    /* ... rest of your responsive CSS for tablet */
+}
+
+
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1> copy av index.html </h1>
+
+<div class="section">
+    <div class="container">
+        <div class="box1">
+            <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit </h1>
+            <p> ut enim ad minim veniam quis nostrud expercitipaton illamico nisi ut alluiped ex ea comm </p>
+            <ul class="icon-list">
+                <li>
+                  <img src="images/1.png" alt="Icon">
+                  <div>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </li>
+
+                <li>
+                    <img src="images/2.png" alt="Icon">
+                    <div>
+                      <h3>Lorem ipsum</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <img src="images/3.png" alt="Icon">
+                    <div>
+                      <h3>Lorem ipsum</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </li>
+                <!-- Repeat the <li> block for each item in your list -->
+              </ul>
+        </div>
+
+        <div class="box2">
+            <div class="image3">
+                <img src="images/robert-anasch-n4nccEcD6AY-unsplash (1).jpg" alt="Large view"> 
+            </div>
+            <div class="image2">
+                <div class="headingInsideImage2">
+                    <h3>Consequat</h3> 
+                    <h3>Duis</h3> 
+                    <h3>1450</h3> 
+                </div>
+            </div>
+            <div class="image1">
+                <img src="images/iam_os-jst9zmbCD58-unsplash.jpg" alt="Small view"> 
+            </div>
+        </div>
+
+</body>
+</html>
